@@ -48,9 +48,18 @@ app.engine('html', exphbs({ extname: '.html' }));
 const saltRounds = 10;
 const salt = b.genSaltSync(saltRounds);
 
-mongoose.connect('mongodb://localhost:27017/flightbooking',{
+
+
+mongoose.connect('mongodb+srv://admin-imthi:imthiyas@cluster0.es5oh08.mongodb.net/flightbooking',{
   useNewUrlParser: true,
 })
+
+
+//if your use this code in your PC or Laptop
+
+//mongoose.connect('mongodb://localhost:27017/flightbooking',{
+//  useNewUrlParser: true,
+//})
 
 // mongoose.set("useCreateIndex", true);
 
