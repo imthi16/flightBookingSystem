@@ -179,7 +179,7 @@ app.get('/signup', (req, res) => {
   // }else{
   //   res.redirect('/signin')
   // }
-  res.sendFile(__dirname +'public/html/signup.html')
+  res.sendFile(__dirname +'/public/html/signup.html')
 })
 
 
