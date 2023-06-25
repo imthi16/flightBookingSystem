@@ -40,9 +40,6 @@ This web application allows users to book flight tickets and provides administra
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or create a pull request.
 
-## License
-
-[Specify the license under which the project is released]
 
 ---
 
