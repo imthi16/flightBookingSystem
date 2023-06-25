@@ -48,7 +48,7 @@ app.engine('html', exphbs({ extname: '.html' }));
 const saltRounds = 10;
 const salt = b.genSaltSync(saltRounds);
 
-mongoose.connect('mongodb://127.0.0.1:27017/flightbooking',{
+mongoose.connect('mongodb+srv://admin-imthi:imthiyas@cluster0.es5oh08.mongodb.net/flightbooking',{
   useNewUrlParser: true,
 })
 
