@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Ticket Booking - Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style media="screen">
+  .container {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.view-button,
+.add-button,
+.delete-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-right: 10px;
+  background-color: #2196F3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover,
+.add-button:hover,
+.delete-button:hover {
+  background-color: #4CAF50;
+}
+
+.logout-link {
+  color: #2196F3;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logout-link:hover {
+  color: #4CAF50;
+}
+
+.buttons {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+<body>
+  <div class="container">
+    <h1>Welcome, Admin</h1>
+    <div class="buttons">
+      <button class="view-button" onclick="document.location='/v'">View</button>
+      <button class="add-button" onclick="document.location='admin'">Add</button>
+      <button class="delete-button" onclick="document.location='radmin'">Delete</button>
+    </div>
+    <a href="#" class="logout-link" onsubmit="preventBack()" onclick="document.location='/logout'">Logout</a>
+  </div>
+</body>
+
+
+<script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function () { null };
+    </script>
+</html>

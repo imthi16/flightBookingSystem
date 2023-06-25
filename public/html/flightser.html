@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Search</title>
+</head>
+<style media="screen">
+  @keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to the form container */
+.form-container {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Style the submit button with animation */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Additional styles to enhance the visual appearance */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #007bff;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+}
+.navigation {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+</style>
+<body>
+  <div class="navigation">
+  <ul>
+    <li><a href="#" onsubmit="preventBack()" onclick="document.location='/mybook'"class="booking">Booking</a></li>
+    <li><a href="#" onclick="document.location='/logout'" class="logout">Logout</a></li>
+  </ul>
+</div>
+  <h1>Flight Search</h1>
+  <form action="/book" method="POST">
+    <label for="origin">flight name:</label>
+    <input type="text" id="origin" name="flightNumber" required>
+    <br>
+    <label for="origin">Origin:</label>
+    <input type="text" id="origin" name="origin" required>
+    <br>
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+    <br>
+    <label for="departureDateTime">Departure Date and Time:</label>
+    <input type="date" id="departureDateTime" name="departureTime" required>
+    <br>
+    <label for="seat">Seat No.</label>
+    <input type="number" id="seat" name="seat" required>
+    <br>
+    <input type="submit" value="Search Flights">
+
+  </form>
+
+  <!-- <h1>Flight Database</h1>
+  <div id="flights-container"></div> -->
+
+
+
+</body>
+
+<script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function () { null };
+    </script>
+</html>

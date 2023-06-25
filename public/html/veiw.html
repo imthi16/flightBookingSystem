@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin View - Flight Data</title>
+</head>
+<body>
+  <h1>Flight Data - Admin View</h1>
+  <div id="flightData"></div>
+
+  <script>
+    // Fetch flight data from the server
+    fetch('/v')
+      .then(response => response.json())
+      .then(data => {
+        const flightDataElement = document.getElementById('flightData');
+
+        // Create HTML elements to display flight data
+        const flightList = document.createElement('ul');
+        flightDataElement.appendChild(flightList);
+
+        data.forEach(flight => {
+          const flightItem = document.createElement('li');
+          flightItem.textContent = `Flight Number: ${flight.flightNumber}, Origin: ${flight.origin}, Destination: ${flight.destination}, Departure Time: ${flight.departureTime}`;
+          flightList.appendChild(flightItem);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>

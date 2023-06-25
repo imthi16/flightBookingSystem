@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Signup</title>
+</head>
+<style media="screen">
+.container {
+width: 400px;
+margin: 0 auto;
+text-align: center;
+}
+
+h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.signup-form input {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.signup-form button {
+width: 100%;
+padding: 10px;
+background-color: #2196F3;
+color: #ffffff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+background-color: #4CAF50;
+}
+
+.signin-link {
+color: #2196F3;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.signin-link:hover {
+color: #4CAF50;
+}
+
+.signup-form {
+opacity: 0;
+transform: translateY(-20px);
+animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+0% {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+</style>
+<body>
+  <div class="container">
+  <h1>User Signup</h1>
+  <form action="/signup" class="signup-form" method="POST">
+    <!-- <label for="username">Username:</label>
+    <input type="text" id="username" name="name" required><br><br> -->
+
+    <label for="email">Email:</label>
+    <input type="email" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Signup">
+  </form>
+  <p>New user? <a onclick="document.location='/signin'" class="signin-link">Sign up here</a></p>
+  </div>
+</body>
+</html>

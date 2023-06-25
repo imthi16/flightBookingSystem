@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    body {
+      text-align:center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .user-button,
+    .admin-button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .user-button {
+      background-color: #2196F3;
+      color: #ffffff;
+    }
+
+    .admin-button {
+      background-color: #FF5722;
+      color: #ffffff;
+      margin-lift:10px;
+    }
+
+    .user-button:hover,
+    .admin-button:hover {
+      background-color: #4CAF50;
+    }
+
+    .user-button:hover::before,
+    .admin-button:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+      z-index: -1;
+      transition: opacity 0.3s;
+      opacity: 0;
+    }
+
+    .user-button:hover::before {
+      animation: pulse 1s infinite;
+    }
+
+    .admin-button:hover::before {
+      animation: pulse 1s infinite reverse;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+  </style>
+  <body>
+    <h1>Welcome to Flight Ticket Booking</h1>
+    <div class="button-container">
+      <button class="user-button" onclick="document.location='/signUp'">User</button>
+      <button class="admin-button" onclick="document.location='/adminlogin'">Admin</button>
+    </div>
+  </body>
+  <script type="text/javascript">
+  </script>
+</html>
