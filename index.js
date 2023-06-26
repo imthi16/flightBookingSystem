@@ -179,7 +179,7 @@ app.get('/signup', (req, res) => {
   // }else{
   //   res.redirect('/signin')
   // }
-  res.sendFile(__dirname +'/public/html/signup.html')
+  res.sendFile('/public/html/signup.html')
 })
 
 
@@ -245,7 +245,7 @@ app.post('/signup', async (req, res) => {
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname+"/index.html")
+  res.sendFile("/index.html")
 })
 
 
