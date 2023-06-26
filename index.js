@@ -251,36 +251,36 @@ app.get('/', (req, res) => {
 
 app.get('/signin',  (req, res) => {
 
-	res.sendFile(__dirname+"/public/html/usersignin.html")
+	res.sendFile("/public/html/usersignin.html")
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile(__dirname+"/public/html/adminadd.html")
+  res.sendFile("/public/html/adminadd.html")
 })
 
 app.get('/radmin', (req, res) => {
-  res.sendFile(__dirname+"/public/html/adminremove.html")
+  res.sendFile("/public/html/adminremove.html")
 })
 
 app.get('/search', (req, res) => {
-  res.sendFile(__dirname+"/public/html/flightser.html")
+  res.sendFile("/public/html/flightser.html")
 });
 
 app.get('/adminlogin', (req, res) => {
-  res.sendFile(__dirname+'/public/html/adminlogin.html')
+  res.sendFile('/public/html/adminlogin.html')
 });
 app.get('/adminhome', (req, res) => {
-  res.sendFile(__dirname+'/public/html/adminhome.html')
+  res.sendFile('/public/html/adminhome.html')
 });
 
 app.get('/adminlogin', (req, res) => {
-  res.sendFile(__dirname+'/public/html/adminlogin.html')
+  res.sendFile('/public/html/adminlogin.html')
 });
 
 app.get('/booking', (req, res) => {
 
 
-    res.sendFile(__dirname + '/public/html/flightser.html');
+    res.sendFile('/public/html/flightser.html');
 });
 
 
