@@ -15,20 +15,7 @@ This web application allows users to book flight tickets and provides administra
 - Add Flights: Admins can add new flights.
 - Remove Flights: Admins can remove existing flights.
 - View Bookings: Admins can view all bookings based on flight number and time.
-
-## Tech Stack
-
-- Backend: [Specify your chosen tech stack here]
-- Database: [Specify your chosen database here]
-- Frontend: HTML and CSS
-
-## Installation
-
-1. Clone the repository: `git clone [repository URL]`
-2. Install dependencies: [Specify the command to install dependencies]
-3. Set up the database: [Provide instructions on how to set up the database]
-4. Start the application: [Specify the command to start the application]
-
+  
 ## Usage
 
 1. Access the application through the provided URL or localhost.
